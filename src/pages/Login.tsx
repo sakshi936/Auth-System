@@ -26,8 +26,8 @@ function Login() {
 
 			try {
 				await login;
-				navigate("/Home");
-				console.log("Logged in");
+				navigate("/");
+				// console.log("Logged in");
 			} catch (error) {
 				console.error("Error logging in:", error);
 			}

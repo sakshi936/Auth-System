@@ -1,4 +1,4 @@
-import { account } from "@/appwrite/appwrite";
+import { account } from "./src/appwrite/appwrite";
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 
@@ -7,7 +7,7 @@ interface ProtectedRouteProps {
 	children: React.ReactNode;
 }
 
-const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }): React.ReactNode => {
+const ProtectLoginRoute: React.FC<ProtectedRouteProps> = ({ children }): React.ReactNode => {
 	// function ProtectedRoute({ children }: ProtectedRouteProps) {
 
 	const [isAuthenticated, setAuthenticated] = useState<boolean | null>(null);
@@ -25,7 +25,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }): React.Reac
 
 	if (isAuthenticated === null) return <div>Loading...</div>;
 
-	return isAuthenticated ? <>{children}</> : <Navigate to={"/login"} />;
+	return !isAuthenticated ? <>{children}</> : <Navigate to={"/"} />;
 };
 
-export default ProtectedRoute;
+export default ProtectLoginRoute;

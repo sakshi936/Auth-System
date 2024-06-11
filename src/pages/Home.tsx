@@ -37,7 +37,7 @@ function Home() {
 							.deleteSession("current")
 							.then(() => {
 								{
-									navigate("/");
+									navigate("/login");
 									console.log("LogedOut");
 								}
 							})

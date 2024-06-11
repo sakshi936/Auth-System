@@ -4,26 +4,27 @@ import "./App.css";
 import Home from "./pages/Home";
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import ProtectedRoute from "../ProtectedRoute";
+import ProtectLoginRoute from "../ProtectLoginRoute";
 
 function App() {
 	const router = createBrowserRouter(
 		createRoutesFromElements(
 			<Route>
-				<Route path="/" element={<Login />} />
+				{/* <Route path="/" element={<Login />} /> */}
 
 				{/* <Route path="/home" element={<Home />} /> */}
 
-				{/* <Route
-					path="/"
+				<Route
+					path="/login"
 					element={
-						<ProtectedRoute>
+						<ProtectLoginRoute>
 							<Login />
-						</ProtectedRoute>
+						</ProtectLoginRoute>
 					}
-				/> */}
+				/>
 				<Route path="/signup" element={<SingUp />} />
 				<Route
-					path="/home"
+					path="/"
 					element={
 						<ProtectedRoute>
 							<Home />

@@ -21,7 +21,7 @@ function SignUp() {
 		onSubmit: async (values) => {
 			const register = account.create(ID.unique(), values.email, values.password, values.firstName);
 
-			toast.promise(register, {
+			await toast.promise(register, {
 				loading: "Registering user ...",
 				error: "Ragistration failed",
 				success: "Register successful",
@@ -73,7 +73,7 @@ function SignUp() {
 				<Toaster />
 				<p className="mt-2">
 					Already have account?
-					<Link to={"/"} className="text-blue-700 underline">
+					<Link to={"/login"} className="text-blue-700 underline">
 						Login
 					</Link>
 				</p>
