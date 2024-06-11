@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { LoginSchema } from "@/Validation/ValidationSchema";
 import { useFormik } from "formik";
 import { account } from "@/appwrite/appwrite";
-import { toast, Toaster } from "sonner";
+import { toast } from "sonner";
 import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
@@ -49,7 +49,6 @@ function Login() {
 				<Input type="password" placeholder="Enter password" id="password" {...formik.getFieldProps("password")} />
 				{formik.touched.password && formik.errors.password ? <div className="text-red-600">{formik.errors.password}</div> : null}
 				{/* Login button */}
-				<Toaster />
 				<Button type="submit" className="w-full mt-5">
 					Sign In
 				</Button>

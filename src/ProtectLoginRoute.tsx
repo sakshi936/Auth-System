@@ -1,4 +1,4 @@
-import { account } from "./src/appwrite/appwrite";
+import { account } from "./appwrite/appwrite";
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 

@@ -5,7 +5,7 @@ import SignupSchema from "@/Validation/ValidationSchema";
 import { account } from "@/appwrite/appwrite";
 import { ID } from "@/appwrite/appwrite";
 import { Link, useNavigate } from "react-router-dom";
-import { toast, Toaster } from "sonner";
+import { toast } from "sonner";
 
 function SignUp() {
 	const navigate = useNavigate();
@@ -70,7 +70,6 @@ function SignUp() {
 				<Button type="submit" className="w-full mt-5">
 					SignUp
 				</Button>
-				<Toaster />
 				<p className="mt-2">
 					Already have account?
 					<Link to={"/login"} className="text-blue-700 underline">
