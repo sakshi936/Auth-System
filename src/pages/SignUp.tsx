@@ -21,7 +21,7 @@ function SignUp() {
 		onSubmit: async (values) => {
 			const register = account.create(ID.unique(), values.email, values.password, values.firstName);
 
-			await toast.promise(register, {
+			toast.promise(register, {
 				loading: "Registering user ...",
 				error: "Ragistration failed",
 				success: "Register successful",
