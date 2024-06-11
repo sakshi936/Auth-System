@@ -3,8 +3,8 @@ import SingUp from "./pages/SignUp";
 import "./App.css";
 import Home from "./pages/Home";
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
-import ProtectedRoute from "./ProtectedRoute";
-import ProtectLoginRoute from "./ProtectLoginRoute";
+import ProtectedRoute from "./ProtectRoute/ProtectedRoute";
+import ProtectLoginRoute from "./ProtectRoute/ProtectLoginRoute";
 
 function App() {
 	const router = createBrowserRouter(
