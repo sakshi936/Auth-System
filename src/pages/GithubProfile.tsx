@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal } from "react";
 
-export default function GithubProfile({ username }) {
+export default function GithubProfile({ username }: any) {
 	const {
 		isPending: userPending,
 		error: userError,
