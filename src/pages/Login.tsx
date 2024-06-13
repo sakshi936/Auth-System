@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { LoginSchema } from "@/Validation/ValidationSchema";
 import { useFormik } from "formik";
-import { account } from "@/appwrite/appwrite";
+import { SignIn } from "@/appwrite/Auth";
 import { toast } from "sonner";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -16,8 +16,8 @@ function Login() {
 		},
 		validationSchema: LoginSchema,
 		onSubmit: async (values) => {
-			const login = account.createEmailPasswordSession(values.email, values.password);
-
+			// const login = account.createEmailPasswordSession(values.email, values.password);
+			const login = SignIn(values.email, values.password);
 			toast.promise(login, {
 				loading: " Logging in ...",
 				success: "login successful",

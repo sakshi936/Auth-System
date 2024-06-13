@@ -2,10 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useFormik } from "formik";
 import SignupSchema from "@/Validation/ValidationSchema";
-import { account } from "@/appwrite/appwrite";
-import { ID } from "@/appwrite/appwrite";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import { Register } from "@/appwrite/Auth";
 
 function SignUp() {
 	const navigate = useNavigate();
@@ -19,16 +18,16 @@ function SignUp() {
 		},
 		validationSchema: SignupSchema,
 		onSubmit: async (values) => {
-			const register = account.create(ID.unique(), values.email, values.password, values.firstName);
+			const registerpromise = Register(values.email, values.password, values.firstName);
 
-			toast.promise(register, {
+			toast.promise(registerpromise, {
 				loading: "Registering user ...",
 				error: "Ragistration failed",
 				success: "Register successful",
 			});
 
 			try {
-				await register;
+				await registerpromise;
 				navigate("/");
 			} catch (error) {
 				console.error("Error register in:", error);

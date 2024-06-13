@@ -8,8 +8,6 @@ interface ProtectedRouteProps {
 }
 
 const ProtectLoginRoute: React.FC<ProtectedRouteProps> = ({ children }): React.ReactNode => {
-	// function ProtectedRoute({ children }: ProtectedRouteProps) {
-
 	const [isAuthenticated, setAuthenticated] = useState<boolean | null>(null);
 
 	useEffect(() => {
