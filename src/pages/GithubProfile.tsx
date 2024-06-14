@@ -7,9 +7,10 @@ export default function GithubProfile({ username }: any) {
 		error: userError,
 		data: userData,
 	} = useQuery({
-		queryKey: ["Userdata"],
+		queryKey: ["Userdata", username],
 		queryFn: () => fetch(`https://api.github.com/users/${username}`).then((res) => res.json()),
 		// queryFn: () => fetch(`https://api.github.com/users/sakshi936`).then((res) => res.json()),
+		staleTime: 0,
 	});
 
 	const {
@@ -17,7 +18,7 @@ export default function GithubProfile({ username }: any) {
 		error: repoError,
 		data: repoData,
 	} = useQuery({
-		queryKey: ["repoData"],
+		queryKey: ["repoData", userData],
 		// queryFn: () => fetch(`https://api.github.com/users/sakshi936/repos`).then((res) => res.json()),
 		queryFn: () => fetch(`https://api.github.com/users/${userData.login}/repos`).then((res) => res.json()),
 	});

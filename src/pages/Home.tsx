@@ -33,7 +33,10 @@ function Home() {
 		},
 		validationSchema: GithubUsernameSchema,
 		onSubmit: (values) => {
+			console.log(values.username);
+
 			setGithubUser(values.username);
+			values.username = "";
 		},
 	});
 
