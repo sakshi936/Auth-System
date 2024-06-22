@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { useFormik } from "formik";
 import { GithubUsernameSchema } from "@/Validation/ValidationSchema";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import GithubProfile from "./GithubProfile";
+import GithubProfile from "../githubprofile/GithubProfile";
 
 interface User {
 	name: string;

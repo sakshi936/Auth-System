@@ -26,12 +26,9 @@ export const LoginSchema = Yup.object().shape({
 
 export const GithubUsernameSchema = Yup.object().shape({
 	username: Yup.string()
-		.trim() // Remove leading/trailing whitespace
+		.trim()
 		.required("Username is required")
 		.matches(/^[a-zA-Z0-9_-]+$/, "Username can only contain letters, numbers, underscores, and hyphens")
 		.min(3, "Username must be at least 3 characters long")
 		.max(39, "Username cannot exceed 39 characters"),
-	// .test("oneOf", "Invalid username", (value) => {
-	// 	return /[0-9]+|[-]/.test(value);
-	// }),
 });
