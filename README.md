@@ -32,6 +32,15 @@ This React application demonstrates user authentication using Appwrite with Reac
 └── tsconfig.json
 
 ```
+## Technologies Used
+- React
+- TypeScript
+- Tailwind CSS
+- Appwrite
+- TanStack Query 
+- Formik
+- Yup
+  
 # Getting Started
 **Prerequisites**
 - Node.js
