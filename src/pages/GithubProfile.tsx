@@ -41,7 +41,7 @@ export default function GithubProfile({ username }: GithubProfileProps) {
 
 	if (userError || repoError) return <p className="text-red-500">{"An error has occurred: "} userError.message repoError.message</p>;
 
-	const NewrepoData = repoData?.filter((repo) => repo.homepage !== null).slice(0, 4) || [];
+	const NewrepoData = repoData?.filter((repo) => repo.homepage !== null).slice(0, 5) || [];
 	return (
 		<div className=" w-1/2 p-5 mt-9 border-[2px] border-black rounded-lg">
 			<div className="flex gap-5 p-3">
@@ -62,7 +62,10 @@ export default function GithubProfile({ username }: GithubProfileProps) {
 					{NewrepoData.map((repo) => (
 						<li key={repo.id} className="mt-3 border-black border-[2px] w-full px-3 py-2 rounded-md">
 							{" "}
-							{repo.name}: <a href={repo.homepage || "#"}>Live link</a>
+							{repo.name}:{" "}
+							<a href={repo.homepage || "#"} className="text-blue-600 underline">
+								Live link
+							</a>
 						</li>
 					))}
 				</ul>
