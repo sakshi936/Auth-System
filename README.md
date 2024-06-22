@@ -1,30 +1,72 @@
-# React + TypeScript + Vite
+# Appwrite Authentication with React and TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This React application demonstrates user authentication using Appwrite with React and TypeScript. The project includes features like User login, User signup, profile management, and protected routes to ensure only authenticated users can access certain parts of the application. The application utilizes Formik for form handling and Yup for form validation.
 
-Currently, two official plugins are available:
+```React
+├── src
+│   ├── components
+│   │   ├── login
+│   │   │   └── Login.tsx
+│   │   ├── register
+│   │   │   └── Register.tsx
+│   │   ├── dashboard
+│   │   │   └── Dashboard.tsx
+│   │   └── ui
+│   │       ├── button.tsx
+│   │       ├── input.tsx
+│   │       └── label.tsx
+│   ├── appwrite
+│   │       ├──appwrite.ts
+│   │       └── auth.ts
+│   ├── ProtectRoute
+│   │       ├──ProtectRoute.tsx
+│   │       └── protectedLoginRoute.tsx
+│   ├── validation
+│   │   └── ValidationSchema.tsx
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── .env
+├── package.json
+├── README.md
+└── tsconfig.json
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
 ```
+## Technologies Used
+- React
+- TypeScript
+- Tailwind CSS
+- Appwrite
+- TanStack Query 
+- Formik
+- Yup
+  
+# Getting Started
+**Prerequisites**
+- Node.js
+- npm or yarn
+- Appwrite server setup
+  
+**Installation**
+- Clone the repository:
+``` react
+git clone https://github.com/your-username/auth-system.git
+cd auth-system
+```
+- Install dependencies:
+ ```
+npm install
+```
+- Set up environment variables:
+Create a .env file in the root directory and add your Appwrite project configuration:
+```
+VITE_APPWRITE_ENDPOINT=http://localhost/v1
+VITE_APPWRITE_PROJECT_ID=your_project_id
+```
+- Running the Application To start the application in development mode:
+```
+npm run dev
+```
+Open your browser and navigate to [http://localhost:5173](http://localhost:5173).
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
