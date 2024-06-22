@@ -7,10 +7,10 @@ This React application demonstrates user authentication using Appwrite with Reac
 │   ├── components
 │   │   ├── login
 │   │   │   └── Login.tsx
-│   │   ├── register
-│   │   │   └── Register.tsx
-│   │   ├── dashboard
-│   │   │   └── Dashboard.tsx
+│   │   ├── signup
+│   │   │   └── SignUp.tsx
+│   │   ├── home
+│   │   │   └── Home.tsx
 │   │   └── ui
 │   │       ├── button.tsx
 │   │       ├── input.tsx
