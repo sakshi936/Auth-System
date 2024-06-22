@@ -9,9 +9,13 @@ import { GithubUsernameSchema } from "@/Validation/ValidationSchema";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import GithubProfile from "./GithubProfile";
 
+interface User {
+	name: string;
+	email: string;
+}
 function Home() {
-	const [User, setUser] = useState<any | null>(null);
-	const [GithubUser, setGithubUser] = useState<string | boolean>("");
+	const [User, setUser] = useState<User | null>(null);
+	const [GithubUser, setGithubUser] = useState<string | null>("");
 	const navigate = useNavigate();
 
 	const queryClient = new QueryClient();
@@ -33,8 +37,6 @@ function Home() {
 		},
 		validationSchema: GithubUsernameSchema,
 		onSubmit: (values) => {
-			console.log(values.username);
-
 			setGithubUser(values.username);
 			values.username = "";
 		},
