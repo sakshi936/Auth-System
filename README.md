@@ -58,6 +58,6 @@ VITE_APPWRITE_PROJECT_ID=your_project_id
 ```
 npm run dev
 ```
-Open your browser and navigate to [link](http://localhost:5173).
+Open your browser and navigate to [http://localhost:5173](http://localhost:5173).
 
 
