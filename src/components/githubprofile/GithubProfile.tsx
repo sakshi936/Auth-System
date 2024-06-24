@@ -43,8 +43,8 @@ export default function GithubProfile({ username }: GithubProfileProps) {
 
 	const NewrepoData = repoData?.filter((repo) => repo.homepage !== null).slice(0, 5) || [];
 	return (
-		<div className=" w-1/2 p-5 mt-9 border-[2px] border-black rounded-lg">
-			<div className="flex gap-5 p-3">
+		<div className="w-full md:w-[30rem] h-auto p-5 mt-9 border-[2px] border-black rounded-lg">
+			<div className="flex gap-5 p-3 flex-wrap">
 				<img src={userData.avatar_url} alt="avt" width={"200px"} height={"200px"} className="rounded-full" />
 				<div className="text-justify">
 					<p className=" mt-12 text-xl font-semibold">{userData.name}</p>

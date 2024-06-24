@@ -43,12 +43,12 @@ function Home() {
 	});
 
 	return (
-		<div className="w-full">
-			<div className="px-20 py-10 w-full  flex justify-between">
+		<div className="w-full ">
+			<div className=" py-10 w-full  flex justify-between flex-wrap">
 				<div>
 					{User ? (
 						<div>
-							<p className="text-5xl font-[Cursive]">Welcome,{`${User.name}`}</p>
+							<p className="text-3xl md:text-5xl font-[Cursive]">Welcome,{`${User.name}`}</p>
 							<p className=" ">Email: {`${User.email}`}</p>
 						</div>
 					) : (
@@ -80,7 +80,7 @@ function Home() {
 				</Button>
 			</div>
 			{/* Github User Profile */}
-			<div className="text-center mt-20">
+			<div className="text-center mt-20  w-full">
 				<h1 className="text-5xl font-serif">Github Profile</h1>
 				<form onSubmit={formik.handleSubmit} className=" mt-5 flex justify-center">
 					<div className=" border-black border-[2px] w-fit flex justify-center  rounded-lg p-[2px]">

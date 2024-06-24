@@ -35,7 +35,7 @@ function SignUp() {
 		},
 	});
 	return (
-		<div className="w-1/2 border-black border-[1px] rounded-lg p-5">
+		<div className="w-[30rem] h-auto border-black border-[1px] rounded-lg p-5">
 			<h1 className="text-center p-4 text-xl font-bold underline">REGISTER</h1>
 
 			<form onSubmit={formik.handleSubmit}>
