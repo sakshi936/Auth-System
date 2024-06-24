@@ -36,6 +36,7 @@ This React application demonstrates user authentication using Appwrite with Reac
 - React
 - TypeScript
 - Tailwind CSS
+- shadcn
 - Appwrite
 - TanStack Query 
 - Formik
