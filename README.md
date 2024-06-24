@@ -1,4 +1,4 @@
-# Appwrite Authentication with React and TypeScript
+# GitHub profile search with auth system using appwrite as backend service
 
 This React application demonstrates user authentication using Appwrite with React and TypeScript. The project includes features like User login, User signup, profile management, and protected routes to ensure only authenticated users can access certain parts of the application. The application utilizes Formik for form handling and Yup for form validation.
 
